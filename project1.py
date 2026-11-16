@@ -1,13 +1,19 @@
 print('''This is First Python project
 The code will be simple Arithmetic Operations''')
-num1 = int(input("Enter a Number: "))
-num2 = int(input("Enter another Number: "))
-list_of_operations = ["Addition", "Subtraction", "Multiplication", "Division", "Remainder"]
-for i, op in enumerate(list_of_operations):
-    print(f"{i+1}. {op}")
 print()
-choice = int(input("Your Choice : "))
+
 while True:
+    num1 = int(input("Enter a Number: "))
+    num2 = int(input("Enter another Number: "))
+    print()
+
+    list_of_operations = ["Addition", "Subtraction", "Multiplication", "Division", "Remainder"]
+    for i, op in enumerate(list_of_operations):
+        print(f"{i+1}. {op}")
+    print()
+
+    choice = int(input("Your Choice : "))
+
     try:
         if choice > 5 or choice < 1:
             print("[ERROR] - Invalid choice!")
@@ -33,7 +39,8 @@ while True:
                 print()
 
             exit = (input("Exit Y/N : ")).lower()
-            
+            print()
+
             if exit == 'y':
                 break
 
